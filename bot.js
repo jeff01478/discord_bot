@@ -29,7 +29,7 @@ client.on('message',msg=>{
     }
     */
 
-    if(msg.content.includes("覺得") || msg.content.includes("認為") || msg.content.includes("應該") || msg.content.includes("或許") || msg.content.includes("也許")){
+    if(msg.content.includes("覺得") || msg.content.includes("認為") || msg.content.includes("應該") || msg.content.includes("或許") || msg.content.includes("也許") || msg.content.includes("可能") || msg.content.includes("不可能")){
         var rnd = Random(5,1);
         switch(rnd){
             case 1:msg.channel.send("你說的真對(燦笑");break;
