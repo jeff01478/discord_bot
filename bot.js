@@ -38,7 +38,12 @@ client.on('message',msg=>{
     }
 
     if(msg.author.id == '369125525509111818'){
-        msg.channel.send({files:["./image/濠吉專用.png"]});
+        var rnd = Random(3,1);
+        switch(rnd){
+            case 1: msg.channel.send({files:["./image/1.jpg"]}); break;
+            case 2: msg.channel.send({files:["./image/2.png"]}); break;
+            case 3: msg.channel.send({files:["./image/3.png"]}); break;
+        }
     }
 
 function Random(max, min){
