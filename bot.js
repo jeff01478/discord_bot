@@ -44,12 +44,21 @@ client.on('message',msg=>{
         }
     }
 
+
     if(msg.channel.id!='955092845038010448'){
+        if(msg.author.bot)
+            return;
+        backstage.send(`${msg.author.username} sent [${msg}]`);
+    }
+
+    if(msg.channel.id!='955102930430742568'){
+        if(msg.author.bot)
+            return;
         backstage.send(`${msg.author.username} sent [${msg}]`);
     }
 
     if(msg.author.id == '338271740763439107'){
-        //msg.channel.send('三色豆走開');
+        //msg.channel.send('三色豆好吃');
     }
 
     if(msg.author.id == '369125525509111818'){
@@ -60,6 +69,31 @@ client.on('message',msg=>{
             case 3: msg.channel.send({files:["./image/3.png"]}); break;
         }
     }
+    
+    if(msg.guild.id == '682954755890216960'){
+        if(msg.content.includes("88") || msg.content.includes("掰掰") || msg.content.includes("讚") || msg.content.includes("不讚") || msg.content.includes("爛")){
+            if(msg.author.bot)
+                return;
+            const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === 'b1ff8a513fdc9d1f');
+            msg.react(reactionEmoji);
+        }
+
+        if(msg.content.includes("替身")){
+            if(msg.author.bot)
+                return;
+            const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === 'JOJO');
+            msg.react(reactionEmoji);
+        }
+
+        var rnd = Random(5,1);
+            if(rnd == 1){
+                if(msg.author.bot)
+                    return;
+                const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === 'b1ff8a513fdc9d1f');
+                msg.react(reactionEmoji);
+            }
+        
+    } 
 
 function Random(max, min){
     var rnd = Math.floor(Math.random()*max) + min;
@@ -67,7 +101,5 @@ function Random(max, min){
 }
 
 })
-
-
 
 client.login(settings.token);
