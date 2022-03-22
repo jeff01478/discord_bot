@@ -55,12 +55,6 @@ client.on('message',msg=>{
         backstage.send(`${msg.author.username} sent [${msg}]`);
     }
 
-    if(msg.channel.id!='955102930430742568'){
-        if(msg.author.bot)
-            return;
-        backstage.send(`${msg.author.username} sent [${msg}]`);
-    }
-
 
     if(msg.author.id == '369125525509111818'){
         var rnd = Random(3,1);
