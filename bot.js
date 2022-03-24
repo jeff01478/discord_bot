@@ -16,13 +16,13 @@ let scheduledMessage = new cron.CronJob('00 00 08 * * *', () =>{
     channel.send({files:["./image/臭雞雞.jpg"]});
 });
 
-let scheduledMessage2 = new cron.CronJob('00 30 19 * * *', () =>{
+let scheduledMessage2 = new cron.CronJob('00 45 19 * * *', () =>{
     let guild = client.guilds.cache.get('954950144686710834');
     let channel = guild.channels.cache.get('954950144686710837');
     channel.send({files:["./image/晚安圖.jpg"]});
 });
 
-let scheduledMessage3 = new cron.CronJob('00 29 19 * * *', () =>{
+let scheduledMessage3 = new cron.CronJob('00 30 19 * * *', () =>{
     let guild = client.guilds.cache.get('682954755890216960');
     let channel = guild.channels.cache.get('682954755890216968');
     channel.send({files:["./image/晚安圖.jpg"]});
