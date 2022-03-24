@@ -16,7 +16,7 @@ let scheduledMessage = new cron.CronJob('00 00 08 * * *', () =>{
     channel.send({files:["./image/臭雞雞.jpg"]});
 });
 
-let scheduledMessage2 = new cron.CronJob('00 00 20 * * *', () =>{
+let scheduledMessage2 = new cron.CronJob('00 07 08 * * *', () =>{
     let guild = client.guilds.cache.get('954950144686710834');
     let channel = guild.channels.cache.get('954950144686710837');
     channel.send("你說的真對(燦笑");
