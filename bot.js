@@ -80,7 +80,7 @@ client.on('message',msg=>{
     }
 
 
-    if(msg.author.id == '682651533003063409'){
+    if(msg.author.id == '369125525509111818'){
         var rnd = Random(3,1);
         switch(rnd){
             case 1: msg.channel.send({files:["./image/幹.jpg"]}); break;
