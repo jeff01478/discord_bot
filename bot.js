@@ -1,18 +1,33 @@
-const {Client, MessageActionRow} = require('discord.js');
+const {Client, MessageActionRow, Message} = require('discord.js');
 const { maxHeaderSize } = require('http');
 const client = new Client({ intents: ["GUILDS", "GUILD_MESSAGES"] })
 const settings = require('./settings.json');
 const { joinVoiceChannel } = require('@discordjs/voice');
+const { channel } = require('diagnostics_channel');
 
 client.on('ready',()=>{
     console.log(`${client.user.tag}登入了,NMSL`);
 });
 
+var time = new Date();
+var Htime = time.getHours();
+var Mtime = time.getMinutes();
+var Stime = time.getSeconds();
+
+/*if(guild.id == "954950144686710834"){
+    if(Mtime == "1"){
+        channel.send("123");
+    }
+}*/
+
 client.on('message',msg=>{
 
     const backstage = msg.guild.channels.cache.find(ch => ch.name === '伺服器後台');
 
-    
+    if(msg.content.includes("幾點")){
+        msg.channel.send("現在時間為" + Htime + "點" + Mtime + "分" + Stime + "秒");
+    }
+
     if(msg.content.startsWith("嗨濠吉掰")){
         if(msg.author.bot)
             return;
