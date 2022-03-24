@@ -43,6 +43,12 @@ client.on('message',msg=>{
         //msg.reply("我是廢物濠吉!!");
         msg.channel.send("你好，你這臭雞雞");
     }
+
+    if(msg.content.includes("123")){
+        if(msg.author.bot)
+            return;
+        msg.channel.send({files:["./image/幹.jpg"]});
+    }
     
     /*
     if(msg.content.includes("濠吉")){
@@ -83,7 +89,7 @@ client.on('message',msg=>{
     if(msg.author.id == '369125525509111818'){
         var rnd = Random(3,1);
         switch(rnd){
-            case 1: msg.channel.send({files:["./image/1.jpg"]}); break;
+            case 1: msg.channel.send({files:["./image/幹.jpg"]}); break;
             case 2: msg.channel.send({files:["./image/2.png"]}); break;
             case 3: msg.channel.send({files:["./image/3.png"]}); break;
         }
