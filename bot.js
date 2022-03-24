@@ -44,12 +44,6 @@ client.on('message',msg=>{
         msg.channel.send("你好，你這臭雞雞");
     }
 
-    if(msg.content.includes("123")){
-        if(msg.author.bot)
-            return;
-        msg.channel.send({files:["./image/幹.jpg"]});
-    }
-    
     /*
     if(msg.content.includes("濠吉")){
         if(msg.author.bot)
