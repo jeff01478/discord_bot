@@ -10,7 +10,7 @@ client.on('ready',()=>{
     console.log(`${client.user.tag}登入了,NMSL`);
 });
 
-let scheduledMessage = new cron.CronJob('00 00 08 * * *', () =>{
+let scheduledMessage = new cron.CronJob('00 00 00 * * *', () =>{
     let guild = client.guilds.cache.get('682954755890216960');
     let channel = guild.channels.cache.get('682954755890216968');
     channel.send({files:["./image/臭雞雞.jpg"]});
@@ -23,7 +23,7 @@ let scheduledMessage2 = new cron.CronJob('00 08 07 * * *', () =>{
     channel.send({files:["./image/晚安圖.jpg"]});
 });
 
-let scheduledMessage3 = new cron.CronJob('00 00 20 * * *', () =>{
+let scheduledMessage3 = new cron.CronJob('00 00 11 * * *', () =>{
     let guild = client.guilds.cache.get('682954755890216960');
     let channel = guild.channels.cache.get('682954755890216968');
     channel.send({files:["./image/晚安圖.jpg"]});
