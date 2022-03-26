@@ -117,11 +117,13 @@ client.on('message',msg=>{
     
     if(msg.guild.id == '682954755890216960'){
         if(msg.content.includes("濠吉掰當我的替身")){
+            /*
             joinVoiceChannel({
                     channelId: msg.member.voice.channel.id,
                     guildId: msg.guild.id,
                     adapterCreator: msg.guild.voiceAdapterCreator
             })
+            */
         }
     }
 
