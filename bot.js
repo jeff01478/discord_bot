@@ -10,23 +10,51 @@ client.on('ready',()=>{
     console.log(`${client.user.tag}登入了,NMSL`);
 });
 
+function Random(max, min){
+    var rnd = Math.floor(Math.random()*max) + min;
+    return rnd;
+}
+
 let scheduledMessage = new cron.CronJob('00 00 00 * * *', () =>{
     let guild = client.guilds.cache.get('682954755890216960');
     let channel = guild.channels.cache.get('682954755890216968');
-    channel.send({files:["./image/臭雞雞.jpg"]});
+    var rnd = Random(5,1);
+    switch(rnd){
+        case 1: channel.send({files:["./image/早安1.jpg"]});break;
+        case 2: channel.send({files:["./image/早安2.jpg"]});break;
+        case 3: channel.send({files:["./image/早安3.jpg"]});break;
+        case 4: channel.send({files:["./image/早安4.jpg"]});break;
+        case 5: channel.send({files:["./image/早安5.jpg"]});break;
+    }
+    
 });
 
-let scheduledMessage2 = new cron.CronJob('00 20 20 * * *', () =>{
+let scheduledMessage2 = new cron.CronJob('00 39 16 * * *', () =>{
     let guild = client.guilds.cache.get('954950144686710834');
     let channel = guild.channels.cache.get('954950144686710837');
     channel.send("你說的真對(燦笑");
-    channel.send({files:["./image/晚安圖.jpg"]});
+    var rnd = Random(5,1);
+    switch(rnd){
+        case 1: channel.send({files:["./image/早安1.jpg"]});break;
+        case 2: channel.send({files:["./image/早安2.jpg"]});break;
+        case 3: channel.send({files:["./image/早安3.jpg"]});break;
+        case 4: channel.send({files:["./image/早安4.jpg"]});break;
+        case 5: channel.send({files:["./image/早安5.jpg"]});break;
+    }
 });
 
 let scheduledMessage3 = new cron.CronJob('00 00 11 * * *', () =>{
     let guild = client.guilds.cache.get('682954755890216960');
     let channel = guild.channels.cache.get('682954755890216968');
-    channel.send({files:["./image/晚安圖.jpg"]});
+    var rnd = Random(5,1);
+    switch(rnd){
+        case 1: channel.send({files:["./image/晚安1.jpg"]});break;
+        case 2: channel.send({files:["./image/晚安2.jpg"]});break;
+        case 3: channel.send({files:["./image/晚安3.jpg"]});break;
+        case 4: channel.send({files:["./image/晚安4.jpg"]});break;
+        case 5: channel.send({files:["./image/晚安5.jpg"]});break;
+    }
+    
 });
 
 
