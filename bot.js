@@ -18,7 +18,7 @@ function Random(max, min){
 let scheduledMessage = new cron.CronJob('00 00 00 * * *', () =>{
     let guild = client.guilds.cache.get('682954755890216960');
     let channel = guild.channels.cache.get('682954755890216968');
-    var rnd = Random(6,1);
+    var rnd = Random(8,1);
     switch(rnd){
         case 1: channel.send({files:["./image/早安1.jpg"]});break;
         case 2: channel.send({files:["./image/早安2.jpg"]});break;
@@ -26,6 +26,8 @@ let scheduledMessage = new cron.CronJob('00 00 00 * * *', () =>{
         case 4: channel.send({files:["./image/早安4.jpg"]});break;
         case 5: channel.send({files:["./image/早安5.jpg"]});break;
         case 6: channel.send({files:["./image/早安6.jpg"]});break;
+        case 7: channel.send({files:["./image/早安6.jpg"]});break;
+        case 8: channel.send({files:["./image/早安6.jpg"]});break;
     }
 });
 
