@@ -102,7 +102,7 @@ client.on('message',msg=>{
             case 5:msg.channel.send("嘛 我感覺是沒那麼誇張啦ww(汗顏");break;
         }
     }
-
+//
 
     if(msg.channel.id!='955092845038010448'){
         if(msg.author.bot)
